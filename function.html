@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript Function</title>
+</head>
+<body>
+	<h1 id="foo">JavaScript Fuctions</h1>
+	<h1 id="forString" style="color: red"></h1>
+	<h1 id="forInt" style="color: pink"></h1>
+	<h1 id="forError" style="color: blue"></h1>
+
+</body>
+
+<script type="text/javascript">
+
+
+const Takeinput = () => {
+    i = prompt("Enter the String or an Integer")
+    type = isNaN(parseInt(i))  ? "string" : "int"
+
+ 	if(type === "string"){
+ 		if(i.search(/[aeiou]/i) === -1){
+ 			document.getElementById("forError").innerHTML = "Not Found"
+ 			return	
+ 		}
+ 		 document.getElementById("forString").innerHTML = `First Object is at place:  ${(i.search(/[aeiou]/i) + 1)}`
+ 	}else if(type === "int") {
+ 		  document.getElementById("forInt").innerHTML = `reverse of the no is:  ${i.split("").reverse().join("")}`
+
+ 	}   
+}
+
+Takeinput()
+
+
+</script>
+</html>

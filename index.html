@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Nested Loop</title>
+</head>
+<body style="text-align: center;">
+	<h1>NESTED LOOP</h1>
+	<button onclick="nestedLoop()">Click me and see console</button>
+	<p id="pPrint" style="text-align: center;"></p>
+</body>
+<script type="text/javascript">
+	function nestedLoop(){
+		for (var i = 0; i <= 10; i++) {
+		console.log(`table of ${i}`)
+		 var pTag= document.getElementById('pPrint');
+             
+			 pTag.innerHTML += `<h3 style="color: red">Table of ${i}</h3>` + "<br />"
+             
+		for (var j = 1; j <= 10; j++) {
+			console.log(`${i} * ${j} = ${i*j}`)
+			
+             pTag.innerHTML += `${i} * ${j} =  ${(i*j)}` + "<br/>" 
+	}	
+	}
+	}
+</script>
+</html>
